@@ -1,0 +1,110 @@
+<div class="container-demos ">
+  <h1>Les composants</h1>
+  <h3>Communication entre les composants : Input / outpout</h3>
+  <p>(src/app/demos/demos02-composants/demos02-composants.component.html)</p>
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-row m-20">
+      <input placeholder="Ajouter un fruit..." class="flex-fill" [(ngModel)]="fruit" type="text">
+      <button (click)="addFruit()" class="btn btn-primary ml-20"> Ajouter</button>
+    </div>
+    <ul class="list-primary m-20">
+      <app-fruit (deleteF)="deleteFruit($event)" *ngFor="let f of fruits" [fruit]="f"></app-fruit>
+    </ul>
+  </div>
+
+
+  <hr/>
+
+  <h3>L'encapsulation</h3>
+  <p>(src/app/demos/demos02-composants/demos02-composants.component.html)</p>
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-column m-20">
+      <p>@Component</p>
+
+      <h5>encapsulation: ViewEncapsulation.Emulated</h5>
+      <p>permet de simuler la portée de styles en ajoutant un attribut
+        qui contient un id de substitution pour l'élément hôte.
+        Les styles définis pour le HTML principal (par convention src/styles.scss)
+        sont appliqués au composant. Mais les styles définis dans ce composant le
+        sont uniquement pour le template de ce composant.w</p>
+
+      <br/>
+
+      <h5>encapsulation: ViewEncapsulation.ShadowDom</h5>
+      <p> utilise le shadow DOM créant un arbre séparé sous une #shadow-root.
+        Les styles définis pour le HTML principal ne sont pas appliqués au
+        template du composant. De même, les styles définis dans ce composant
+        le sont uniquement pour le template de ce composant.</p>
+
+      <br/>
+
+      <h5>encapsulation: ViewEncapsulation.none </h5>
+      <p>ne fournit aucune encapsulation pour le template et le style.
+        Par conséquent, les styles définis dans ce composant se propagent
+        à tous les autres templates.</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h3>Référence locale</h3>
+  <p>(src/app/demos/demos02-composants/demos02-composants.component.html)</p>
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-column m-20">
+      <div class="d-flex flex-row m-20">
+        <input #myInput placeholder="Ajouter un fruit..." class="flex-fill" [(ngModel)]="fruit" type="text">
+        <button (click)="addFruitBis(myInput)" class="btn btn-primary ml-20"> Ajouter</button>
+      </div>
+      <ul #myList class="list-primary m-20">
+        <app-fruit (deleteF)="deleteFruit($event)" *ngFor="let f of fruits" [fruit]="f"></app-fruit>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Les décorateurs @ViewChild et @ViewChildren</h3>
+  <p>(src/app/demos/demos02-composants/demos02-composants.component.html)</p>
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-column m-20">
+      <div class="d-flex flex-row m-20">
+        <input #myinputSecond placeholder="Ajouter un fruit..." class="flex-fill" [(ngModel)]="fruit" type="text">
+        <button (click)="addFruitSecond()" class="btn btn-primary ml-20"> Ajouter</button>
+      </div>
+      <ul class="list-primary m-20">
+        <app-fruit (deleteF)="deleteFruit($event)" *ngFor="let f of fruits" [fruit]="f"></app-fruit>
+      </ul>
+      <p> Il y a {{ countFruit }} élément(s)</p>
+    </div>
+  </div>
+
+  <h3>Directive ng-content</h3>
+  <div class="d-flex flex-column m-20">
+    <ul class="list-primary m-20">
+      <app-fruit (deleteF)="deleteFruit($event)" *ngFor="let f of fruits" [fruit]="f">
+        (text ajouté avec ng-content)
+      </app-fruit>
+    </ul>
+  </div>
+
+  <hr />
+
+  <h3>ContentChild</h3>
+  <app-contentchild></app-contentchild>
+
+  <hr />
+
+  <h3>Cycle de vie des composants</h3>
+  <div class="container d-flex flex-column">
+    <div class="d-flex flex-row">
+      <input #myinputBis class="m-10 flex-fill" type="text" />
+      <button class="btn btn-primary m-10" (click)="addFruitBis(myinputBis)">Ajouter</button>
+    </div>
+    <ul class="list-primary m-10">
+
+      <app-hook  *ngFor="let f of fruits"
+                 [fruit]="f"
+                 (deleteF)="deleteFruit($event)"></app-hook>
+    </ul>
+  </div>
+
+</div>
+

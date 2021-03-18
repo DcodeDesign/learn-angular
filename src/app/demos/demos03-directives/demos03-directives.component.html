@@ -1,0 +1,51 @@
+<div class="container-demos mb-20">
+  <h1>Les directives</h1>
+
+  <h3>Directive d'attribut</h3>
+  <h4>Demos : </h4>
+  <div class="demos">
+    <p appColor> Je suis une directive d'attribut avec le selector [appColor]</p>
+    <p>(src/app/demos/demos03-directives/directives/color.directive.ts)<p>
+  </div>
+
+  <hr>
+
+  <h3>Hostlistener</h3>
+  <h4>Demos : </h4>
+  <div class="demos">
+    <p appClick> Je suis une directive d'attribut utilisant le Hostlistener avec le selector [appClick]</p>
+    <p>(src/app/demos/demos03-directives/directives/click.directive.ts)<p>
+  </div>
+
+  <hr>
+
+  <h3>Hostbinding</h3>
+  <h4>Demos : </h4>
+  <div class="demos">
+    <p appAddClass> Je suis une directive d'attribut utilisant le Hostbinding avec le selector [appAddClass]</p>
+    <p>(src/app/demos/demos03-directives/directives/appAddClass.directive.ts)<p>
+  </div>
+
+  <hr>
+
+  <h3>Liaison de propriétés et directive</h3>
+  <h4>Demos : </h4>
+  <div class="demos">
+    <p [appChangeColor]="{color: 'white', backgroundColor: 'purple'}"  > Je suis une directive d'attribut utilisant le Hostbinding avec le selector [appAddClass]</p>
+    <p >(src/app/demos/demos03-directives/directives/appAddClass.directive.ts)<p>
+  </div>
+
+  <hr>
+
+  <h3>Directive structurelle</h3>
+  <div class="demos">
+    <button *appIf="hide">Hello</button>
+    <button *appIf="false">Hello</button>
+  </div>
+
+</div>
+
+
+
+
+

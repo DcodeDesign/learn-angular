@@ -1,0 +1,12 @@
+<h3>[ngClass]</h3>
+<p>(src/app/demos/demos01-databinding/ng-class/ng-class.component.html)</p>
+<div class="d-flex flex-column">
+  <div class="square" [ngClass]="{
+    bluesquare: true,
+    redsquare: false
+  }" ></div>
+
+  <div class="square" [class.redsquare]="true" ></div>
+</div>
+
+

@@ -1,0 +1,11 @@
+<h3>*ngFor</h3>
+<p>(src/app/demos/demos01-databinding/for/for.component.html)</p>
+<div class="d-flex flex-column">
+
+  <ul>
+    <li *ngFor="let user of users; let i = index">
+      {{ i }} - {{ user.nom }}
+    </li>
+  </ul>
+</div>
+

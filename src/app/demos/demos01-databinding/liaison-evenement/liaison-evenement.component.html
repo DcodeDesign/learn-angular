@@ -1,0 +1,10 @@
+<h3>La liaison des évènements</h3>
+<p>(src/app/demos/demos01-databinding/liaison-evenement/liaison-evenement.component.html)</p>
+<div class="d-flex flex-column">
+  <div class="square"
+       [style.background]="color"
+       [style.width]="width"
+       (click)="changeColor($event)"
+       (mouseenter)="changeForm($event)"
+  ></div>
+</div>

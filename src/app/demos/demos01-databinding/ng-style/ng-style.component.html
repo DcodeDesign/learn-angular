@@ -1,0 +1,9 @@
+<h3>[ngStyle]</h3>
+<p>(src/app/demos/demos01-databinding/if/if.component.html)</p>
+<div class="d-flex flex-column">
+
+  <input type="color" [(ngModel)]="color">
+  <p [ngStyle]="{color: 'white', backgroundColor: color}" > Bonjour </p>
+  <p [style.color]="color" > Bonjour encore</p>
+
+</div>

@@ -113,6 +113,10 @@ const routes: Routes = [
   }, {
     path: 'projets/projet08-todolist',
     loadChildren: () => import('./projets/projet08-todolist/projet08-todolist.module').then(m => m.Projet08TodolistModule)
+  },  {
+    path: '',
+    redirectTo: 'demos/demos01-databinding',
+    pathMatch: 'full'
   }];
 
 @NgModule({

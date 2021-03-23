@@ -2,7 +2,6 @@
     // Demos
     ng generate module demos/demos01-databinding --route demos/demos01-databinding --module app.module &&
     ng generate module demos/demos02-composants --route demos/demos02-composants --module app.module &&
-        ng generate component demos/demos02-composants/fruit
     ng generate module demos/demos03-directives --route demos/demos03-directives --module app.module &&
     ng generate module demos/demos04-injection-dependances --route demos/demos04-injection-dependances --module app.module &&
     ng generate module demos/demos05-observable --route demos/demos05-observable --module app.module &&

@@ -7,6 +7,8 @@
     ng generate module demos/demos05-observable --route demos/demos05-observable --module app.module &&
     ng generate module demos/demos06-directive-service --route demos/demos06-directive-service --module app.module &&
     ng generate module demos/demos07-routing --route demos/demos07-routing --module app.module &&
+        ng generate module demos/demos07-routing/app-intro --route demos/demos07-routing/app-intro --module demos/demos07-routing/demos07-routing-routing.module.ts
+        ng generate c demos/demos07-routing/app-intro/user
     ng generate module demos/demos08-formulaire --route demos/demos08-formulaire --module app.module &&
     ng generate module demos/demos09-pipes --route demos/demos09-pipes --module app.module &&
     ng generate module demos/demos10-requetes-http --route demos/demos10-requetes-http --module app.module &&

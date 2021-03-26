@@ -38,8 +38,8 @@
     }
 
     a.active{
-      background-color:#e3e3e3;
-      color: #454545;
+      background-color: #868686;
+      color: #dedede;
     }
   }
 
@@ -47,6 +47,14 @@
     flex:8;
     height:100vh;
     overflow:auto;
+  }
+
+  .bg-green {
+    background-color: #7ae07a;
+  }
+
+  .bg-orange {
+    background-color: #e9b65f;
   }
 
 }

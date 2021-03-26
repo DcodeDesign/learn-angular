@@ -5,7 +5,7 @@ import {Projet02InputOutputRoutingModule} from './projet02-input-output-routing.
 import {Projet02InputOutputComponent} from './projet02-input-output.component';
 import {Cocktail02ListComponent} from './components/cocktail-container/cocktail02-list/cocktail02-list.component';
 import {Cocktail02DetailComponent} from './components/cocktail-container/cocktail02-detail/cocktail02-detail.component';
-import {Header02Component} from './components/header/header02.component';
+import {Header02Component} from './components/header02/header02.component';
 import { CocktailContainerComponent } from './components/cocktail-container/cocktail-container.component';
 
 

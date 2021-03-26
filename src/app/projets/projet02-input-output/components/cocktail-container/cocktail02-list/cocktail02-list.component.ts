@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Cocktail} from '../../../../projet01-cocktails/interfaces/cocktail';
+import {Cocktail02} from '../../../interfaces/cocktail02';
 
 @Component({
   selector: 'app-cocktail02-list',
@@ -7,7 +7,7 @@ import {Cocktail} from '../../../../projet01-cocktails/interfaces/cocktail';
   styleUrls: ['./cocktail02-list.component.scss']
 })
 export class Cocktail02ListComponent implements OnInit {
-  @Input() public cocktails: Cocktail;
+  @Input() public cocktails: Cocktail02;
   @Output() public changeCocktail: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}

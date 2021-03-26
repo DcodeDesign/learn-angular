@@ -1,0 +1,10 @@
+<h1>USERS</h1>
+<ul class="list-primary">
+<!--  <li [routerLink]="[user.id, user.name]"
+      [queryParams]="{name: user.name}"
+      fragment="foo"
+      *ngFor="let user of users"> {{ user.name }}</li>-->
+
+  <li (click)="redirectionUser(user)"
+      *ngFor="let user of users"> {{ user.name }}</li>
+</ul>

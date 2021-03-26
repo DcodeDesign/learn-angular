@@ -99,7 +99,7 @@ const routes: Routes = [
     path: 'projets/projet03-directive-service',
     loadChildren: () => import('./projets/projet03-directive-service/projet03-directive-service.module').then(m => m.Projet03DirectiveServiceModule)
   }, {
-    path: 'projets/projet04-routing',
+    path: 'projets/projet04-intro',
     loadChildren: () => import('./projets/projet04-routing/projet04-routing.module').then(m => m.Projet04RoutingModule)
   }, {
     path: 'projets/projet05-formulaires',
@@ -113,7 +113,7 @@ const routes: Routes = [
   }, {
     path: 'projets/projet08-todolist',
     loadChildren: () => import('./projets/projet08-todolist/projet08-todolist.module').then(m => m.Projet08TodolistModule)
-  },  {
+  }, {
     path: '',
     redirectTo: 'demos/demos01-databinding',
     pathMatch: 'full'

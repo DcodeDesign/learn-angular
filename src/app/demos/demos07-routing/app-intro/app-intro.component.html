@@ -1,13 +1,14 @@
 <div class="container d-flex flex-column border-frame" >
   <nav >
     <ul>
-      <li><a routerLink="../"
+      <li><a [routerLink]="['./']"
              routerLinkActive="active"
              [routerLinkActiveOptions]="{exact:true}"
       > Homepage </a></li>
-      <li> <a [routerLink]="['../users']"
+      <li> <a [routerLink]="['users']"
               routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}"
+              [queryParams]="{details:true}"
+              [routerLinkActiveOptions]="{exact:false}"
       > Users </a> </li>
     </ul>
   </nav>

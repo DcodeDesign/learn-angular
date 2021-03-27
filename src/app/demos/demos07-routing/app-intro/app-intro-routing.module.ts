@@ -5,34 +5,26 @@ import {AppIntroComponent} from './app-intro.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {UsersComponent} from './users/users.component';
 import {UserComponent} from './user/user.component';
+import {FourOfourComponent} from '../four-ofour/four-ofour.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   {
-    path: '', component: AppIntroComponent, pathMatch: 'full',
+    path: '', component: AppIntroComponent, pathMatch: 'prefix',
     children: [
-      {path: '', component: HomepageComponent, pathMatch: 'prefix'},
+      {path: '', component: HomepageComponent},
+      {
+        path: 'users',
+        component: UsersComponent,
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        children: [
+          {path: ':id/:name', component: UserComponent}
+        ]
+      }
     ]
   },
-
-  {
-    path: 'homepage', component: AppIntroComponent, pathMatch: 'full',
-    children: [
-      {path: '', component: HomepageComponent, pathMatch: 'prefix'},
-    ]
-  },
-
-  {
-    path: 'users', component: AppIntroComponent, pathMatch: 'full',
-    children: [
-      {path: '', component: UsersComponent, pathMatch: 'prefix'},
-    ]
-  },
-  {
-    path: 'users/:id/:name', component: AppIntroComponent, pathMatch: 'full',
-    children: [
-      {path: '', component: UserComponent, pathMatch: 'prefix'},
-    ]
-  }
+  {path: '**', component: FourOfourComponent}
 ];
 
 @NgModule({

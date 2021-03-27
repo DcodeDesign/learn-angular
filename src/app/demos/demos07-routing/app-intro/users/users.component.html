@@ -5,6 +5,13 @@
       fragment="foo"
       *ngFor="let user of users"> {{ user.name }}</li>-->
 
-  <li (click)="redirectionUser(user)"
+  <!--<li (click)="redirectionUser(user)"
+      *ngFor="let user of users"> {{ user.name }}</li>-->
+
+  <li [routerLink]="[user.id, user.name]"
+      [queryParams]="{name: user.name}"
+      queryParamsHandling="merge"
+      fragment="foo"
       *ngFor="let user of users"> {{ user.name }}</li>
 </ul>
+<router-outlet></router-outlet>

@@ -11,6 +11,8 @@ export class UserComponent implements OnInit {
   public name: string;
   public nameQuery: string;
   public fragment: string;
+  public details: string;
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class UserComponent implements OnInit {
 
     this.activatedRoute.queryParamMap.subscribe((paramMap: ParamMap) => {
       this.nameQuery = paramMap.get('name');
+      this.details = paramMap.get('details');
     });
 
     this.activatedRoute.fragment.subscribe((fragment: string) => {

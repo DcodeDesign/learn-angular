@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
+import {User} from '../users/users.component';
 
 @Component({
   selector: 'app-user',
@@ -12,8 +13,10 @@ export class UserComponent implements OnInit {
   public nameQuery: string;
   public fragment: string;
   public details: string;
+  private data: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
@@ -28,6 +31,11 @@ export class UserComponent implements OnInit {
 
     this.activatedRoute.fragment.subscribe((fragment: string) => {
       this.fragment = fragment;
+    });
+
+    this.activatedRoute.data.subscribe((data: { title: string, user: User }) => {
+        this.data = data.title;
+        console.log(data.user.id, data.user.name );
     });
 
   }

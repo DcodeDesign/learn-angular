@@ -7,6 +7,7 @@ import {UsersComponent} from './users/users.component';
 import {UserComponent} from './user/user.component';
 import {FourOfourComponent} from '../four-ofour/four-ofour.component';
 import {AuthGuard} from './auth.guard';
+import {EditComponent} from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,17 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
         children: [
-          {path: ':id/:name', component: UserComponent}
+          {path: ':id/:name/edit', canDeactivate: [AuthGuard], component: EditComponent},
+          {
+            path: ':id/:name',
+            component: UserComponent,
+            data: {
+              title: 'User List'
+            },
+            resolve: {
+              user: AuthGuard
+            }
+          }
         ]
       }
     ]

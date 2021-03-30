@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   public nameQuery: string;
   public fragment: string;
   public details: string;
-  private data: string;
+  public data: string;
 
   constructor(private activatedRoute: ActivatedRoute) {
   }

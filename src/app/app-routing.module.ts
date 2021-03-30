@@ -99,7 +99,7 @@ const routes: Routes = [
     path: 'projets/projet03-directive-service',
     loadChildren: () => import('./projets/projet03-directive-service/projet03-directive-service.module').then(m => m.Projet03DirectiveServiceModule)
   }, {
-    path: 'projets/projet04-intro',
+    path: 'projets/projet04-routing',
     loadChildren: () => import('./projets/projet04-routing/projet04-routing.module').then(m => m.Projet04RoutingModule)
   }, {
     path: 'projets/projet05-formulaires',

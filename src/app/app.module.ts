@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FourOfourComponent } from './demos/demos07-routing/four-ofour/four-ofour.component';
 import { PanierContainerComponent } from './projets/projet04-routing/components/panier-container/panier-container.component';
 import { IngredientListComponent } from './projets/projet04-routing/components/panier-container/ingredient-list/ingredient-list.component';
+import { CocktailFormComponent } from './projets/projet04-routing/components/cocktail-form/cocktail-form.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { IngredientListComponent } from './projets/projet04-routing/components/p
     FourOfourComponent,
     PanierContainerComponent,
     IngredientListComponent,
+    CocktailFormComponent,
   ],
   imports: [
     BrowserModule,

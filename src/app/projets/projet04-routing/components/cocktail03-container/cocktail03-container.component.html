@@ -1,8 +1,15 @@
 <div class="d-flex flex-row mt-20 mb-20">
-  <app-cocktail04-list
+ <!-- <app-cocktail04-list
     [cocktails]="cocktails"
     (changeCocktail)="selectCocktail($event)"
     [selectedCocktail]="selectedCocktail"
+    class="flex-40 pr-20 pl-20"></app-cocktail04-list>-->
+
+  <app-cocktail04-list
+    [cocktails]="cocktails"
     class="flex-40 pr-20 pl-20"></app-cocktail04-list>
-  <app-cocktail04-detail [cocktail]="selectedCocktail" class="flex-60 pr-20 pl-20 "></app-cocktail04-detail>
+  <!--<app-cocktail04-detail [cocktail]="selectedCocktail" class="flex-60 pr-20 pl-20"></app-cocktail04-detail>-->
+  <div class="flex-60 pr-20 pl-20" >
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -35,7 +35,7 @@
     ng generate module projets/projet02-input-output --route projets/projet02-input-output --module app.module &&
     ng generate module projets/projet03-directive-service --route projets/projet03-directive-service --module app.module &&
     ng generate module projets/projet04-routing --route projets/projet04-routing --module app.module &&
-         ng g projets/projet04-routing/
+         ng g s projets/projet04-routing/shared/services/panier
     ng generate module projets/projet05-formulaires --route projets/projet05-formulaires --module app.module &&
     ng generate module projets/projet06-pipe-http --route projets/projet06-pipe-http --module app.module &&
     ng generate module projets/projet07-ngrx --route projets/projet07-ngrx --module app.module &&

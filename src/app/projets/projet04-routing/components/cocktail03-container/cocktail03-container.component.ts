@@ -10,14 +10,13 @@ import {Subscription} from 'rxjs';
 })
 export class Cocktail03ContainerComponent implements OnInit, OnDestroy {
   public cocktails: Cocktail04Interface[] = [];
-  public selectedCocktail: Cocktail04Interface;
+  /*public selectedCocktail: Cocktail04Interface;*/
   public subscription: Subscription = new Subscription();
 
   constructor(private cocktailService: Cocktail02Service) {
   }
 
   ngOnInit(): void {
-    console.log(this.selectedCocktail);
     this.subscription.add(
       this.cocktailService.$cocktails.subscribe(
       (cocktails: Cocktail04Interface[]) => {
@@ -25,19 +24,19 @@ export class Cocktail03ContainerComponent implements OnInit, OnDestroy {
       })
     );
 
-    this.subscription.add(
+    /*this.subscription.add(
       this.cocktailService.$selectedCocktail.subscribe(
       (selectedCocktail: Cocktail04Interface) => {
         this.selectedCocktail = selectedCocktail;
       })
-    );
+    );*/
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-  public selectCocktail(index: number): void {
+  /*public selectCocktail(index: number): void {
     this.cocktailService.selectCocktail(index);
-  }
+  }*/
 }

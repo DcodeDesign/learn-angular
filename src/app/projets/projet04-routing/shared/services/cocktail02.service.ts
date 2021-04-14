@@ -17,7 +17,7 @@ export class Cocktail02Service {
         ingredients: [
           {name: 'Perrier', quantity: 1},
           {name: 'Rhum', quantity: 1},
-          {name: 'Menthe', quantity: 1}
+          {name: 'Menthe', quantity: 4}
         ]
       },
       {
@@ -27,8 +27,8 @@ export class Cocktail02Service {
         desc:
           'The tangy concoction of vodka, triple sec, lime juice and cranberry juice has managed to leapfrog the venerable screwdriver as many vodka drinkers prefer the Cosmopolitan’s cleaner and slightly tart taste. The keys to the preparation of a Cosmopolitan are a good brand of cranberry juice and Cointreau Triple Sec, two essential elements to the drink.',
         ingredients: [
-          {name: 'Cranberry', quantity: 1},
-          {name: 'Citron', quantity: 1},
+          {name: 'Cranberry', quantity: 4},
+          {name: 'Citron', quantity: 2},
           {name: 'Vodka', quantity: 1}
         ]
       },
@@ -41,18 +41,23 @@ export class Cocktail02Service {
         ingredients: [
           {name: 'Rhum', quantity: 1},
           {name: 'Triple sec', quantity: 1},
-          {name: 'Citron', quantity: 1}
+          {name: 'Citron', quantity: 2}
         ]
       }
     ]
   );
 
-  public $selectedCocktail: BehaviorSubject<Cocktail04Interface> = new BehaviorSubject<Cocktail04Interface>(
+  /*public $selectedCocktail: BehaviorSubject<Cocktail04Interface> = new BehaviorSubject<Cocktail04Interface>(
     this.$cocktails.value[0]
   );
 
   public selectCocktail(index: number): void {
     this.$selectedCocktail.next(this.$cocktails.value[index]);
+  }*/
+
+  public getCocktail(index: number): Cocktail04Interface {
+    const cocktails = this.$cocktails.value;
+    return cocktails[index];
   }
 
   constructor() {

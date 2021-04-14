@@ -8,15 +8,16 @@ import {Selected02Directive} from '../../../shared/directives/selected02.directi
   styleUrls: ['./cocktail04-list.component.scss']
 })
 export class Cocktail04ListComponent implements OnInit {
-  @Input() public cocktails: Cocktail04Interface[];
+  /* @Input() public cocktails: Cocktail04Interface[];
   @Input() public selectedCocktail: Cocktail04Interface;
-  @Output() public changeCocktail: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public changeCocktail: EventEmitter<number> = new EventEmitter<number>();*/
+  @Input() public cocktails: Cocktail04Interface[];
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  public selectCocktail(index: number): void {
+  /*public selectCocktail(index: number): void {
     this.changeCocktail.emit(index);
-  }
+  }*/
 }
